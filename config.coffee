@@ -29,8 +29,9 @@ config.input.path = 'src'
 # Main index file
 config.input.jade = "#{config.input.path}/index.jade"
 # Service worker file
+config.input.serviceWorker = {}
 config.input.serviceWorker.enabled = true
-config.input.serviceWorker = ["#{config.input.path}/service-worker.coffee"]
+config.input.serviceWorker.patterns = ["#{config.input.path}/service-worker.coffee"]
 # Where to find templates
 config.input.template = [
   "#{config.input.path}/*.jade"
