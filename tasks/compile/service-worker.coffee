@@ -12,7 +12,7 @@ uglify        = require 'gulp-uglify'
 
 module.exports = (gulp, config) ->
   gulp.task 'compile:serviceWorker', ->
-    gulp.src config.input.serviceWorker
+    gulp.src config.input.serviceWorker.patterns
     .pipe plumber()
     .on 'error', gutil.log
     .pipe gif config.input.replace.enabled, replace config.input.replace
